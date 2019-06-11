@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {}
+    "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {
+    "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
+        "projectUniqueName": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
         "projectName": "air-nomads-canvas-to-CSV",
-        "projectPath": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
-        "packagesPath": "C:\\Users\\lwargha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\obj\\",
+        "projectPath": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
+        "packagesPath": "C:\\Users\\eljulander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lwargha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eljulander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,11 +41,19 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[12.1.2, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
             }
           },
           "imports": [
