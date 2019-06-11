@@ -15,7 +15,7 @@ namespace air_nomads_canvas_to_CSV
                 //Sets securely our canvas token to our http header
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
                 //asynchronously makes a get request to the link we want to
-                HttpResponseMessage response = await client.GetAsync("https://byui.instructure.com/api/v1/accounts/1/courses?by_subaccounts[]=96");
+                HttpResponseMessage response = await client.GetAsync("https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions");
                 response.EnsureSuccessStatusCode();
                 //stringfy the response
                 string responseBody = await response.Content.ReadAsStringAsync();
