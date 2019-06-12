@@ -2,26 +2,28 @@ using CanvasObjects;
 using Newtonsoft.Json;
 using System.Reflection;
 using System;
+using System.Collections.Generic;
 namespace JsonConverter{
     public static class JsonToCsv{
         public static string convertCourseJsonToCsv(string JsonString){
             
             var course = JsonConvert.DeserializeObject<CourseObject>(JsonString);
             System.Console.WriteLine(course.id);
-            compressToCsv(course);
-            return "";
+            return compressToCsv(course);
         }
 
         private static string compressToCsv(CourseObject course){
-            BindingFlags bindingFlags = BindingFlags.Public |
-                            BindingFlags.NonPublic |
-                            BindingFlags.Instance |
-                            BindingFlags.Static;
-            System.Console.WriteLine(typeof(CourseObject).GetFields(bindingFlags)[0].Name);
-            foreach(FieldInfo field in typeof(CourseObject).GetFields(bindingFlags)){
-                Console.WriteLine(field.Name);
+            
+            System.Console.WriteLine(course.GetType().GetProperties()[0].Name);
+            List<string> headers = new List<string>();
+            List<string> values = new List<string>();
+            foreach(var field in course.GetType().GetProperties()){
+                headers.Add(field.Name);
+                values.Add($"{field.GetValue(course, null)}");
             }
-            return "";
+            var headerLine = string.Join(",",headers.ToArray());
+            var dataLine = string.Join(",", values);
+            return string.Join("\n", new string[]{headerLine, dataLine});
         }
     }
 }
