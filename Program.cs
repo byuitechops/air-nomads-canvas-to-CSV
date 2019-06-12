@@ -15,6 +15,13 @@ namespace air_nomads_canvas_to_CSV
             string text = System.IO.File.ReadAllText(pathToToken);
             var result = await HTTPHelper.MakeHttpAuthCall(text, url);
             System.Console.WriteLine(result);
+
+        }
+        static void Main(string[] args)
+        {
+            var JSON = System.IO.File.ReadAllText("./test.json");
+            Console.WriteLine(JSON);
+            JSON_TO_CSV.getCSVFromJSON(JSON);
         }
         static void Main(string[] args)
         {
