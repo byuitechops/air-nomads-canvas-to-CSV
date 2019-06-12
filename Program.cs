@@ -17,12 +17,7 @@ namespace air_nomads_canvas_to_CSV
             System.Console.WriteLine(result);
 
         }
-        static void Main(string[] args)
-        {
-            var JSON = System.IO.File.ReadAllText("./test.json");
-            Console.WriteLine(JSON);
-            JSON_TO_CSV.getCSVFromJSON(JSON);
-        }
+
         static void Main(string[] args)
         {
             var csv = JsonToCsv.convertCourseJsonToCsv(System.IO.File.ReadAllText("./test.json"));
