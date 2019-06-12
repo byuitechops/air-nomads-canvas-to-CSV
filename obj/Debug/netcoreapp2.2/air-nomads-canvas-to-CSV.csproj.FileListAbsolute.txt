@@ -26,3 +26,8 @@ C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\a
 C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.AssemblyInfo.cs
 C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.dll
 C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.pdb
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\bin\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.deps.json
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\bin\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.runtimeconfig.json
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\bin\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.runtimeconfig.dev.json
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\bin\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.dll
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\bin\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.pdb
