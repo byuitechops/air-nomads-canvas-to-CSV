@@ -1,14 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using JSON_TO_CSV_CONVERTER;
+using JsonConverter;
 
 namespace air_nomads_canvas_to_CSV
 {
     class Program
     {
-
-        public async static void makeHttpCall(){
+        static async void authThinggy(){
 
             string pathToToken = @"C:\Users\lwargha\auth.txt";
             string url = "https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions";
@@ -23,6 +22,11 @@ namespace air_nomads_canvas_to_CSV
             var JSON = System.IO.File.ReadAllText("./test.json");
             Console.WriteLine(JSON);
             JSON_TO_CSV.getCSVFromJSON(JSON);
+        }
+        static void Main(string[] args)
+        {
+            var csv = JsonToCsv.convertCourseJsonToCsv(System.IO.File.ReadAllText("./test.json"));
+            System.IO.File.WriteAllText("./test.csv", csv);
         }
     }
 }

@@ -44,6 +44,7 @@
     "access_restricted_by_date": false,
     "time_zone": "America/Denver",
     "blueprint": true,
+    "itemz": [1,23,4,5],
     "blueprint_restrictions": {"content":true,"points":true,"due_dates":false,"availability_dates":false},
     "blueprint_restrictions_by_object_type": {"assignment":{"content":true,"points":true},"wiki_page":{"content":true}}
   }
