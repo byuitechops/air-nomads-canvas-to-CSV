@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {}
+    "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {
+    "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
+        "projectUniqueName": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
         "projectName": "air-nomads-canvas-to-CSV",
-        "projectPath": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
-        "packagesPath": "C:\\Users\\lwargha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lwargha\\air-nomads-canvas-to-CSV\\obj\\",
+        "projectPath": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\air-nomads-canvas-to-CSV.csproj",
+        "packagesPath": "C:\\Users\\eljulander\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eljulander\\Documents\\air-nomads-canvas-to-CSV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lwargha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eljulander\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
@@ -46,6 +52,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
             }
           },
           "imports": [
