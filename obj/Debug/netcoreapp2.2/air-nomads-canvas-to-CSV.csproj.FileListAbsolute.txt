@@ -20,3 +20,9 @@ C:\Users\eljulander\Documents\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\a
 C:\Users\eljulander\Documents\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.AssemblyInfo.cs
 C:\Users\eljulander\Documents\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.dll
 C:\Users\eljulander\Documents\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.pdb
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.csprojAssemblyReference.cache
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.csproj.CoreCompileInputs.cache
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.AssemblyInfoInputs.cache
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.AssemblyInfo.cs
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.dll
+C:\Users\johnlreiley\Projects\air-nomads-canvas-to-CSV\obj\Debug\netcoreapp2.2\air-nomads-canvas-to-CSV.pdb
