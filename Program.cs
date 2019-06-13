@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using JsonConverter;
 using CanvasObjects;
 using CsvHelper;
-
 namespace air_nomads_canvas_to_CSV
 {
     class Program
@@ -15,13 +14,12 @@ namespace air_nomads_canvas_to_CSV
             string token = args[0];
             string url = "https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions";
             var result = await HTTPHelper.MakeHttpAuthCall(token, url);
-            Quiz quiz = JsonToCsv.convertCourseJsonToObj(result);
-            var quizzes = new List<Quiz>();
-            quizzes.Add(quiz);
+            var quizzez = JsonToCsv.convertJsonToQuizList(result);
+        
             using (var writer = new StreamWriter("quiz.csv"))
             using (var csv = new CsvWriter(writer))
             {
-                csv.WriteRecords(quizzes);
+                csv.WriteRecords(quizzez);
             }
         }
     }
