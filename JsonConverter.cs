@@ -1,27 +1,16 @@
 using CanvasObjects;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-namespace JsonConverter{
-    public static class JsonToCsv{
-        public static string convertCourseJsonToCsv(string JsonString){
-            var course = JsonConvert.DeserializeObject<CourseObject>(JsonString);
-            Console.WriteLine(course.id);
-            return compressToCsv(course);
-        }
+using Newtonsoft.Json.Linq;
 
-        private static string compressToCsv(CourseObject course){
-            
-            System.Console.WriteLine(course.GetType().GetProperties()[0].Name);
-            List<string> headers = new List<string>();
-            List<string> values = new List<string>();
-            foreach(var field in course.GetType().GetProperties()){
-                headers.Add(field.Name);
-                values.Add($"{field.GetValue(course, null)}");
-            }
-            var headerLine = string.Join(",",headers.ToArray());
-            var dataLine = string.Join(",", values);
-            return string.Join("\n", new string[]{headerLine, dataLine});
+namespace JsonConverter
+{
+    public static class JsonToCsv
+    {
+        public static Quiz convertCourseJsonToObj(string JsonString)
+        {
+            JArray j = JArray.Parse(JsonString);
+            Quiz quiz = JsonConvert.DeserializeObject<Quiz>(j[0].ToString().Replace("\r\n", "").Replace(System.Environment.NewLine, "").Replace("\r", ""));
+            return quiz;
         }
     }
 }
