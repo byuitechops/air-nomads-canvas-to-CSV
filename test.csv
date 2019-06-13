@@ -1,0 +1,4 @@
+id,quiz_id,quiz_group_id,assessment_question_id,position,question_name,question_type,question_text,points_possible,correct_comments,incorrect_comments,neutral_comments,correct_comments_html,incorrect_comments_html,neutral_comments_html,answers,variables,formulas,answer_tolerance,formula_decimal_places,matches,matching_answer_incorrect_matches
+5465812,585539,,7235396,1,Question,multiple_answers_question,<link rel="stylesheet" href="https://instructure-uploads.s3.amazonaws.com/account_107060000000000001/attachments/144455/online.css"><div class="byui span102">
+<p><span>Mark the answer that best applies. If you only attended one lab, you should just mark the first one. If you attended two, you should mark the second. If you attended three, you should mark the third.</span></p>
+</div>,1,,,,,,,System.Collections.Generic.List`1[System.Object],,,,,,
