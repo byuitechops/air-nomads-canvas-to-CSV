@@ -2,22 +2,23 @@ using System.Collections.Generic;
 using CanvasObjects;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace JsonConverter
 {
-    public static class JsonToCsv
+    public static class JsonToCanvas<T>
     {
-        public static List<Quiz> convertJsonToQuizList(string JsonString)
+        public static List<T> convertJsonToQuizList(string JsonString)
         {
             JArray quizArray = JArray.Parse(JsonString);
-            List<Quiz> quizzez = new List<Quiz>();
-            foreach(var quiz in quizArray){
-                quizzez.Add(convertToQuizObject(quiz.ToString()));
+            List<T> canvasObjects = new List<T>();
+            foreach(var canvasObject in quizArray){
+                canvasObjects.Add(convertToQuizObject(canvasObject.ToString()));
             }
-            return quizzez;
+            return canvasObjects;
         }
-        public static Quiz convertToQuizObject(string quizObject){
-            return JsonConvert.DeserializeObject<Quiz>(quizObject.Replace("\r\n", "").Replace(System.Environment.NewLine, "").Replace("\r", ""));
+        public static T convertToQuizObject(string quizObject){
+            return JsonConvert.DeserializeObject<T>(quizObject.Replace("\r\n", "").Replace(System.Environment.NewLine, "").Replace("\r", ""));
         }
 
     }

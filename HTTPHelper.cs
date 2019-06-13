@@ -7,7 +7,7 @@ namespace air_nomads_canvas_to_CSV
     internal static class HTTPHelper
     {
         private static readonly HttpClient client = new HttpClient();
-        public static async Task<string> MakeHttpAuthCall(string token, string path)
+        public static async Task<string> MakeHttpAuthCall(string token, string url)
         {
             // Call asynchronous network methods in a try/catch block to handle exceptions
             try
@@ -15,7 +15,7 @@ namespace air_nomads_canvas_to_CSV
                 //Sets securely our canvas token to our http header
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
                 //asynchronously makes a get request to the link we want to
-                HttpResponseMessage response = await client.GetAsync(path);
+                HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 //stringfy the response
                 string responseBody = await response.Content.ReadAsStringAsync();
