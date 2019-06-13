@@ -11,11 +11,8 @@ namespace air_nomads_canvas_to_CSV
         {
             string token = args[0];
             string url = "https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions";
-            // string path = args[0];
             var result = await HTTPHelper.MakeHttpAuthCall(token, url);
-            System.Console.WriteLine(result);
-            //System.IO.File.WriteAllText("./result.txt", result);
-
+            Console.WriteLine(result);
             var csv = JsonToCsv.convertCourseJsonToCsv(result);
             System.IO.File.WriteAllText("./test.csv", csv);
         }

@@ -1,14 +1,12 @@
 using CanvasObjects;
 using Newtonsoft.Json;
-using System.Reflection;
 using System;
 using System.Collections.Generic;
 namespace JsonConverter{
     public static class JsonToCsv{
         public static string convertCourseJsonToCsv(string JsonString){
-            
             var course = JsonConvert.DeserializeObject<CourseObject>(JsonString);
-            System.Console.WriteLine(course.id);
+            Console.WriteLine(course.id);
             return compressToCsv(course);
         }
 
