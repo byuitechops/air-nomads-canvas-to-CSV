@@ -1,34 +1,51 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using JsonConverter;
 using CanvasObjects;
+using CanvasCoursestring;
 using CanvasToCsvConverter;
 
 namespace air_nomads_canvas_to_CSV
 {
     class Program
     {
-
         static async Task Main(string[] args)
         {
+            var run = true;
             string token = Environment.GetEnvironmentVariable("API_TOKEN");
-            string url = promtUrlEnpoint();
+            var urlList = new List<string>();
+            System.Console.WriteLine("Enter course API endpoints (type 'exit' when done):");
+            while (run)
+            {
+                string input = Console.ReadLine();
+                if (input == "exit")
+                {
+                    run = false;
+                }
+                else
+                {
+                    urlList.Add("https://byui.instructure.com/" + input);
+                }
+            }
             string filename = promtFilename();
 
-            System.Console.WriteLine("URL: " + url);
+            string[] urls = urlList.ToArray();
+
+            //System.Console.WriteLine("URL: " + url);
 
             // string url = "https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions";
 
-            var result = await HTTPHelper.MakeHttpAuthCall(token, url);
-            var quizzez = JsonToCanvas<Quiz>.convertJsonToQuizList(result);
-            var csvString = CanvasToCsv.convertToCSV<Quiz>(quizzez, new string[]{"id", "question_name", "incorrect_comments"});
-            System.IO.File.WriteAllText("./filtered_output.csv", csvString);
-        }
+            var results = await HTTPHelper.MakeHttpAuthCallForEach(token, urls);
+            //var resultsString = string.Join(",", results);
 
-        static string promtUrlEnpoint()
-        {
-            System.Console.WriteLine("Enter the api endpoint:");
-            return ("https://byui.instructure.com/" + Console.ReadLine());
+            System.Console.WriteLine(results);
+
+            // DON'T RUN PAST HERE
+            var canvasCourses = JsonToCanvas<CanvasCourse>.convertJsonToCanvasObjectList(results);
+
+            var csvString = CanvasToCsv.convertToCSV<CanvasCourse>(canvasCourses, new string[] { "id", "name", "total_students" });
+            System.IO.File.WriteAllText("./filtered_output.csv", csvString);
         }
 
         static string promtFilename()
@@ -36,5 +53,7 @@ namespace air_nomads_canvas_to_CSV
             System.Console.WriteLine("Enter destination filename:");
             return Console.ReadLine();
         }
+
+
     }
 }
