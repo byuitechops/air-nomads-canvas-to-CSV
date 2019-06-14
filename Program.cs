@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using JsonConverter;
 using CanvasObjects;
-using CsvHelper;
+using CanvasToCsvConverter;
+
 namespace air_nomads_canvas_to_CSV
 {
     class Program
     {
-
 
         static async Task Main(string[] args)
         {
@@ -23,14 +21,8 @@ namespace air_nomads_canvas_to_CSV
 
             var result = await HTTPHelper.MakeHttpAuthCall(token, url);
             var quizzez = JsonToCanvas<Quiz>.convertJsonToQuizList(result);
-            var csvString = "";
-            using (var writer = new StringWriter())
-            using (var csv = new CsvWriter(writer))
-            {
-                csv.WriteRecords(quizzez);
-                csvString =  (writer.ToString());
-            }    
-            System.Console.WriteLine(csvString);
+            var csvString = CanvasToCsv.convertToCSV<Quiz>(quizzez, new string[]{"id", "question_name", "incorrect_comments"});
+            System.IO.File.WriteAllText("./filtered_output.csv", csvString);
         }
 
         static string promtUrlEnpoint()
