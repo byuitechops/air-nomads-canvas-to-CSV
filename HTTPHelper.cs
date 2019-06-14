@@ -25,7 +25,7 @@ namespace air_nomads_canvas_to_CSV
             {
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
-                throw e;
+                throw;
             }
         }
 
@@ -41,7 +41,8 @@ namespace air_nomads_canvas_to_CSV
                 }
                 catch (HttpRequestException e)
                 {
-                    System.Console.WriteLine("Error in url #" + (i + 1) + ": {0}", e.Message);
+                    System.Console.WriteLine("Error found in url #" + (i + 1) + ": {0}", e.Message);
+                    throw;
                 }
 
 

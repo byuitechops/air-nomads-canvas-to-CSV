@@ -37,14 +37,10 @@ namespace air_nomads_canvas_to_CSV
             // string url = "https://byui.instructure.com/api/v1/courses/47002/quizzes/585539/questions";
 
             var results = await HTTPHelper.MakeHttpAuthCallForEach(token, urls);
-            //var resultsString = string.Join(",", results);
 
-            System.Console.WriteLine(results);
-
-            // DON'T RUN PAST HERE
             var canvasCourses = JsonToCanvas<CanvasCourse>.convertJsonToCanvasObjectList(results);
 
-            var csvString = CanvasToCsv.convertToCSV<CanvasCourse>(canvasCourses, new string[] { "id", "name", "total_students" });
+            var csvString = CanvasToCsv.convertToCSV<CanvasCourse>(canvasCourses, new string[] { "id", "name", "created_at", "license" });
             System.IO.File.WriteAllText("./filtered_output.csv", csvString);
         }
 
