@@ -7,39 +7,43 @@ using System;
 
 namespace ClassToCsvConverter
 {
-    public static class ClassToCsv{
+    public static class ClassToCsv
+    {
 
         /*
          * Creates a new object only containing values which mactch the headers
          */
-        public static dynamic newObjectFromHeaders<T>(T oldObject, string[] headers){
+        public static dynamic newObjectFromHeaders<T>(T oldObject, string[] headers)
+        {
             dynamic newObject = new ExpandoObject();
-            var dictionary = (IDictionary<string, object>) newObject;
+            var dictionary = (IDictionary<string, object>)newObject;
             oldObject.GetType().GetProperties()
                      .Where(property => headers.Any(selectorz => property.Name == selectorz)).ToList()
                      .ForEach(property => dictionary.Add(property.Name, property.GetValue(oldObject)));
             return newObject;
         }
-        
+
         /*
          * This creates a csv string with only containing fields under the headers mentioned in the array
          */
-        public static string convertToCSV<T>(List<T> ClassObjectList, string[] headers){
-            var newCanvasObjectList = ClassObjectList.Select<T, dynamic>( (canvasObject) => {return newObjectFromHeaders(canvasObject, headers);}).ToList();
+        public static string convertToCSV<T>(List<T> ClassObjectList, string[] headers)
+        {
+            var newCanvasObjectList = ClassObjectList.Select<T, dynamic>((canvasObject) => { return newObjectFromHeaders(canvasObject, headers); }).ToList();
             return convertToCSV<dynamic>(newCanvasObjectList);
         }
 
         /*
          * When no headers are specified, it creates a csv file for all headers
          */
-        public static string convertToCSV<T>(List<T> ClassObjectList){
+        public static string convertToCSV<T>(List<T> ClassObjectList)
+        {
             string csvOutput = "";
             using (var writer = new StringWriter())
             using (var csv = new CsvWriter(writer))
             {
                 csv.WriteRecords(ClassObjectList);
-                csvOutput =  (writer.ToString());
-            }    
+                csvOutput = (writer.ToString());
+            }
             return csvOutput;
         }
 
