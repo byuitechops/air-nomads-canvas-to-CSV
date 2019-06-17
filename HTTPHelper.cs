@@ -29,5 +29,27 @@ namespace air_nomads_canvas_to_CSV
             }
         }
 
+        public static async Task<string[]> MakeHttpAuthCallForEach(string token, string[] urls)
+        {
+            string[] responseBodies = new string[urls.GetLength(0)];
+
+            for (int i = 0; i < urls.GetLength(0); i++)
+            {
+                try
+                {
+                    responseBodies[i] = await MakeHttpAuthCall(token, urls[i]);
+                }
+                catch (HttpRequestException e)
+                {
+                    System.Console.WriteLine("Error found in url #" + (i + 1) + ": {0}", e.Message);
+                    throw;
+                }
+
+
+            }
+
+            return responseBodies;
+        }
+
     }
 }
