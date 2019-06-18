@@ -26,7 +26,7 @@ namespace ClassToCsvConverter
             return convertToCSV<dynamic>(newCanvasObjectList);
         }
 
-        
+
         /* When no headers are specified, it creates a csv file for all headers */
         public static string convertToCSV<T>(List<T> ClassObjectList)
         {
