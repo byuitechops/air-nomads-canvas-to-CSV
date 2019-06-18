@@ -28,7 +28,7 @@ namespace air_nomads_canvas_to_CSV
                     urlList.Add("https://byui.instructure.com/" + input);
                 }
             }
-            string filename = promtFilename();
+            string filename = promptFilename();
 
             string[] urls = urlList.ToArray();
 
@@ -44,7 +44,7 @@ namespace air_nomads_canvas_to_CSV
             System.IO.File.WriteAllText("./filtered_output.csv", csvString);
         }
 
-        static string promtFilename()
+        static string promptFilename()
         {
             System.Console.WriteLine("Enter destination filename:");
             return Console.ReadLine();
