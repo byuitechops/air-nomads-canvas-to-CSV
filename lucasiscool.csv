@@ -1,0 +1,12 @@
+id,name,account_id,uuid,start_at,grading_standard_id,is_public,created_at,course_code,default_view,root_account_id,enrollment_term_id,license,end_at,public_syllabus,public_syllabus_to_auth,storage_quota_mb,is_public_to_auth_users,hide_final_grades,apply_assignment_group_weights,locale,calendar,time_zone,blueprint,sis_course_id,integration_id,enrollments,workflow_state,restrict_enrollments_to_course_dates
+47002,Beginning Spanish II (Online File Backup 02.06.19),100,BGwc55YYbF7VcNCxq4fRSxkyvAwvNpbpL8WDjeDp,,1,False,2/6/2019 6:44:31 PM,SPAN 102 Online FB 02.06.19,wiki,1,1,private,,False,True,2000,False,False,True,en,"{
+  ""ics"": ""https://byui.instructure.com/feeds/calendars/course_BGwc55YYbF7VcNCxq4fRSxkyvAwvNpbpL8WDjeDp.ics""
+}",America/Denver,False,,,"[
+  {
+    ""type"": ""teacher"",
+    ""role"": ""TeacherEnrollment"",
+    ""role_id"": 4,
+    ""user_id"": 47636,
+    ""enrollment_state"": ""active""
+  }
+]",unpublished,False

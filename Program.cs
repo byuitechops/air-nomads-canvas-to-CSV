@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Collections.Generic;
-using JsonConverter;
-using CanvasCoursestring;
-using ClassToCsvConverter;
+using System.Linq;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+
 
 namespace air_nomads_canvas_to_CSV
 {
@@ -25,9 +25,9 @@ namespace air_nomads_canvas_to_CSV
             }
 
             var results = await HTTPHelper.MakeHttpAuthCallForEach(token, urls);
-            var canvasCourses = JsonToCanvas<CanvasCourse>.convertJsonToCanvasObjectList(results);
-
-            var csvString = ClassToCsv.convertToCSV<CanvasCourse>(canvasCourses, new string[] { "id", "name", "created_at", "license" });
+            System.Console.WriteLine(results[0]);
+            var Objects = JArray.Parse( (!results[0].EndsWith("]")) ? $"[{results[0]}]" : results[0]);
+            var csvString = ClassToCsvConverter.ClassToCsv.convertToCSV(Objects);
             System.IO.File.WriteAllText(fileOutput, csvString);
         }
 
