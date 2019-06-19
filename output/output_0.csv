@@ -1,1 +1,2 @@
 id,name,workflow_state,parent_account_id,root_account_id,uuid,default_storage_quota_mb,default_user_storage_quota_mb,default_group_storage_quota_mb,default_time_zone
+1,BYU-Idaho,active,,,4iQDPeSYBXmnV6TBHwwomXhG7uX2bOdspYNXDeKW,2000,1000,1000,America/Denver

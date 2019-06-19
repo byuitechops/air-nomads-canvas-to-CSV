@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-
 
 namespace air_nomads_canvas_to_CSV
 {
@@ -25,10 +23,11 @@ namespace air_nomads_canvas_to_CSV
             }
 
             var results = await HTTPHelper.MakeHttpAuthCallForEach(token, urls);
-            System.Console.WriteLine(results[0]);
-            var Objects = JArray.Parse( (!results[0].EndsWith("]")) ? $"[{results[0]}]" : results[0]);
-            var csvString = ClassToCsvConverter.ClassToCsv.convertToCSV(Objects);
-            System.IO.File.WriteAllText(fileOutput, csvString);
+            var Objects = results.ToList().Select(result => {return JArray.Parse( (!result.EndsWith("]")) ? $"[{result}]" : result);}).ToList();
+            var csvStringz = Objects.Select<JArray, string>(objectz => {return ClassToCsvConverter.ClassToCsv.convertToCSV(objectz);}).ToList();
+            System.Console.WriteLine(string.Join("\n\n\n\n\n\n\n\n\n\n\n\n", results));
+            for(var i = 0; i < csvStringz.Count; i ++)
+                System.IO.File.WriteAllText("./output/"+fileOutput+"_"+i+".csv", csvStringz[i]);
         }
 
 
