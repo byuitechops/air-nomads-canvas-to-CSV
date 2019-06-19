@@ -1,10 +1,10 @@
-id,uuid,folder_id,display_name,filename,workflow_state,upload_status,content-type,url,size,created_at,updated_at,unlock_at,locked,hidden,lock_at,hidden_for_user,thumbnail_url,modified_at,mime_class,media_entry_id,locked_for_user
-4078382,BpWLw6fuf9MDJyctQ4jetX1xC4LKBdOVrVUPEGMd,722897,Generate Project Specss.html,Generate+Project+Specss.html,pending_upload,success,text/html,https://byui.instructure.com/files/4078382/download?download_frd=1&verifier=BpWLw6fuf9MDJyctQ4jetX1xC4LKBdOVrVUPEGMd,758,11/6/2018 10:43:09 PM,11/6/2018 10:43:09 PM,,False,False,,False,,11/6/2018 10:43:09 PM,html,,False
-1215981,eJ3ztVVNjfncVUKuWusXz6mwCOdLJwa4Kp2h9p6k,1451,hi¼.txt,hi%C2%B2.txt,processed,success,text/plain,https://byui.instructure.com/files/1215981/download?download_frd=1&verifier=eJ3ztVVNjfncVUKuWusXz6mwCOdLJwa4Kp2h9p6k,10,6/15/2018 4:50:05 PM,6/15/2018 4:50:06 PM,,False,False,,False,,6/15/2018 4:50:05 PM,text,,False
-1215980,6pIZ4GqXlRlQRldWNs4UChAQvJubdbL1LFENjJz1,1451,hi².txt,hi%C2%B2.txt,processed,success,text/plain,https://byui.instructure.com/files/1215980/download?download_frd=1&verifier=6pIZ4GqXlRlQRldWNs4UChAQvJubdbL1LFENjJz1,10,6/15/2018 4:49:50 PM,6/15/2018 4:49:51 PM,,False,False,,False,,6/15/2018 4:49:50 PM,text,,False
-1215983,3HJdx0FCR7QEdTPRP4olAkRXaCciX63mNfCHS1wL,1451,hiè.txt,hi%C2%B2.txt,processed,success,text/plain,https://byui.instructure.com/files/1215983/download?download_frd=1&verifier=3HJdx0FCR7QEdTPRP4olAkRXaCciX63mNfCHS1wL,10,6/15/2018 4:50:54 PM,6/15/2018 4:50:55 PM,,False,False,,False,,6/15/2018 4:50:54 PM,text,,False
-3264674,NwvNVf6b9wfD8qDRKSA200KcjXSRIflYwQ5xJrBX,626553,homeImage.jpg,homeImage.jpg,processed,success,image/jpeg,https://byui.instructure.com/files/3264674/download?download_frd=1&verifier=NwvNVf6b9wfD8qDRKSA200KcjXSRIflYwQ5xJrBX,192360,10/4/2018 6:56:58 PM,10/4/2018 6:56:59 PM,,False,False,,False,https://byui.instructure.com/images/thumbnails/3264674/NwvNVf6b9wfD8qDRKSA200KcjXSRIflYwQ5xJrBX,10/4/2018 6:56:58 PM,image,,False
-899568,rvrfmAuDpw6lzum6Kh2QhQRDv0fyezhyIZQg97en,1451,iframe.html,iframe.html,processed,success,text/html,https://byui.instructure.com/files/899568/download?download_frd=1&verifier=rvrfmAuDpw6lzum6Kh2QhQRDv0fyezhyIZQg97en,617,4/12/2018 10:35:35 PM,4/12/2018 10:35:35 PM,,False,False,,False,,4/12/2018 10:35:35 PM,html,,False
-4078384,p9s2Vw2XwvyJyrvJTqg5oV0GL8RgJagImRD7KNDf,722897,main.css,main.css,pending_upload,success,text/css,https://byui.instructure.com/files/4078384/download?download_frd=1&verifier=p9s2Vw2XwvyJyrvJTqg5oV0GL8RgJagImRD7KNDf,3862,11/6/2018 10:43:10 PM,11/6/2018 10:43:10 PM,,False,False,,False,,11/6/2018 10:43:10 PM,code,,False
-4078386,9GwrbtkmOFjTCJU12SGyS4tInO8vfXQmN4rHUg3m,722897,main.js,main.js,pending_upload,success,text/javascript,https://byui.instructure.com/files/4078386/download?download_frd=1&verifier=9GwrbtkmOFjTCJU12SGyS4tInO8vfXQmN4rHUg3m,1942,11/6/2018 10:43:10 PM,11/6/2018 10:43:10 PM,,False,False,,False,,11/6/2018 10:43:10 PM,file,,False
-114043,uqF0cdN1O4aCyspgUAWwB9GVisE1BfT29Td0wgXz,1451,warnings.PNG,warnings.PNG,processed,success,image/png,https://byui.instructure.com/files/114043/download?download_frd=1&verifier=uqF0cdN1O4aCyspgUAWwB9GVisE1BfT29Td0wgXz,33548,10/30/2017 9:33:03 PM,10/30/2017 9:33:03 PM,,False,False,,False,https://byui.instructure.com/images/thumbnails/114043/uqF0cdN1O4aCyspgUAWwB9GVisE1BfT29Td0wgXz,10/30/2017 9:33:03 PM,image,,False
+id
+4078382
+1215981
+1215980
+1215983
+3264674
+899568
+4078384
+4078386
+114043

@@ -21,11 +21,11 @@ namespace air_nomads_canvas_to_CSV
             {
                 fileOutput = Prompter.promptFilename();
             }
-
+            var headers = new string[]{"id","name","title"};
             var results = await HTTPHelper.MakeHttpAuthCallForEach(token, urls);
             var Objects = results.ToList().Select(result => {return JArray.Parse( (!result.EndsWith("]")) ? $"[{result}]" : result);}).ToList();
-            var csvStringz = Objects.Select<JArray, string>(objectz => {return ClassToCsvConverter.ClassToCsv.convertToCSV(objectz);}).ToList();
-            System.Console.WriteLine(string.Join("\n\n\n\n\n\n\n\n\n\n\n\n", results));
+            var csvStringz = Objects.Select<JArray, string>(objectz => {return CsvGenerator.ClassToCsv.convertToCSV(objectz, headers);}).ToList();
+           
             for(var i = 0; i < csvStringz.Count; i ++)
                 System.IO.File.WriteAllText("./output/"+fileOutput+"_"+i+".csv", csvStringz[i]);
         }
